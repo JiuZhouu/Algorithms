@@ -26,7 +26,7 @@
 
 7、穷举蛮力算法：考察计算每一个方案，选一个方案最大的。
 
-## 问题复杂度
+## 问题复杂度 排序问题
 
 问题计算复杂度的界定：排序问题
 
@@ -38,3 +38,72 @@
 |    堆排序    | $O(nlogn)$ | $O(nlogn)$ |
 | 二分归并排序 | $O(nlogn)$ | $O(nlogn)$ |
 
+## 货郎问题与计算复杂性理论
+
+
+
+
+
+## 几类重要的函数
+
+介绍积累常用的函数的阶的性质，以及如何利用上述性质估计函数的阶。
+
+### 基本函数类 
+
+#### 阶的高低
+
+指数级：$2^n,3^n,n!,...$ 爆炸性增长
+
+多项式级：$n,n^2,nlogn,n^{1/2},...$  比指数级缓慢得多
+
+对数多项式级：$logn,log^2n,loglogn,...$  比多项式缓慢得多
+
+### 对数函数
+
+#### 符号
+
+$logn=log_2n$
+
+$log^kn=(logn)^k$
+
+$loglogn=log(logn)$
+
+#### 性质
+
+(1) $log_2n=\Theta(log_ln)$ 表示它们同阶，log的底不重要
+
+(2) $log_bn=o(n^a)  a>0$  表示前面的阶低于后面的阶
+
+(3) $a^{log_bn}=n^{log_ba}$
+
+### 指数函数与阶乘
+
+#### Stirling公式：$n!=\sqrt{2\pi n}(\frac{n}{e})^n(1+\Theta(\frac1n))$
+
+$n!=o(n^n)$
+
+$n!=\omega(2^n)$
+
+$log(n!)=\Omega(nlogn)=O(nlogn)$  所以它们同阶$log(n!)=\Theta(nlogn)$ 
+
+#### 应用：估计搜索空间大小
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202210301652694.png" alt="image-20221030165248719" style="zoom: 50%;" />
+
+### 取整函数
+
+取整函数的定义
+
+$\lceil x \rceil$ x向下取整
+
+$\lfloor x \rfloor$ x向上取整
+
+二分检索输入数组长度n，中位数位置$\lfloor n/2 \rfloor$，与中位数比较后子问题大小$\lfloor n/2 \rfloor$ 
+
+$\lfloor \frac{n}{2} \rfloor+ \lceil \frac{n}{2} \rceil=n$
+
+
+
+从高到低阶的排序
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202210301653128.png" alt="image-20221030153802558" style="zoom:50%;" />

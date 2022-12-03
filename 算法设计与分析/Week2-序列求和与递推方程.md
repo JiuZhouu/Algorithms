@@ -20,7 +20,58 @@
 
 数列求和公式：等差数列，等比数列，调和级数
 
-<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202211241507964.png" alt="image-20221124150702886" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202212032016787.png" alt="image-20221124150702886" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202212032033774.png" alt="image-20221203203352300" style="zoom: 67%;" />
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202212032044047.png" alt="image-20221203204443234" style="zoom:67%;" />
+
+估计序列和：放大法求上界，用积分做和式的渐近的界
 
 
 
+## 02 递推方程与算法分析
+
+**递推方程**：序列{$a_n$}，一个把${a_n}$与某些个${a_i(i<n)}$联系起来的等式。
+
+**递推方程的求解**：给定关于序列{${a_n}$}的递推方程和若干初值，计算${a_n}$。
+
+eg斐波那契数列：1，1，2，3，5，8，13，21
+
+给出递推方程和初值，可以推算到解fn，表达成n的函数
+
+**递归算法**：Hanoi挪盘子
+
+**插入排序**：插入一个数，需要和前面每一个排好的数，从后向前，依次比较。
+
+基本运算是元素比较，对规模为n的输入最坏的情况下的时间复杂度W(n)=W(n-1)+n-1,W(1)=0,最终解得W(n)=n(n-1)/2。
+
+
+
+## 03 迭代法求解递推方程
+
+**迭代法**
+
+不断用地推方程的右部替换左部；
+
+每次替换，随着n的降低在和式中多出一项；
+
+直到出现初值停止迭代；
+
+将初值带入并对和式求和；
+
+可用数学归纳法验证解的正确性。
+
+**换元迭代**
+
+将对n的递推式换成对其他变元k的递推式
+
+对k直接迭代
+
+将解（关于k的函数）转换成关于n的函数
+
+
+
+## 04 差消法求解递推方程
+
+**快速排序**：

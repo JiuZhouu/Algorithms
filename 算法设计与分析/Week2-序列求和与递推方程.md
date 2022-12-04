@@ -74,4 +74,26 @@ eg斐波那契数列：1，1，2，3，5，8，13，21
 
 ## 04 差消法求解递推方程
 
-**快速排序**：
+**快速排序**：用首元素做划分标准，比较之后划成两半，把首元素再放进去。划分成两个子问题，再继续递归排序。
+
+工作量：子问题工作量+划分工作量
+
+对于高阶方程应该先化简为一阶方程，然后迭代
+
+利用两个方程相减，将右边的项尽可能小区，以达到降阶的目的
+
+
+
+## 05 递归树
+
+递归树是迭代计算的模型，生成过程与迭代过程一致。
+
+递归树上所有项恰好是迭代之后产生和式之后的项，对递归树上的项求和就是迭代后方程的解。
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202212041744821.png" alt="image-20221204174442328" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202212041746038.png" alt="image-20221204174644196" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202212041748091.png" alt="image-20221204174852965" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/img/202212041749044.png" alt="image-20221204174934398" style="zoom:67%;" />

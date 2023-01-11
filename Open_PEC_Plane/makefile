@@ -3,7 +3,7 @@ BLASLIB  = -lblas-icc
 LAPACKLIB  = -llapack-icc
 
 p0.x: p0.o self.o near.o far.o f1.o f2.o
-	ifort  ${FFLAG} -o p0.x p0.o self.o near.o far.o f1.o f2.o $(LAPACKLIB) $(BLASLIB)
+	ifort  ${FFLAG} -o p0.x p0.o self.o near.o far.o f1.o f2.o 
 
 p0.o:
 	ifort  ${FFLAG} -c p0.f -o p0.o
